@@ -9,9 +9,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
   <script src="app.js"></script>
   <meta charset="utf-8">
-  <title>JS Bin</title>
+  <title>Ducati Shop</title>
 </head>
 <body ng-controller="AppController">
+  <div id="menu-bar">
+    <a ui-sref="monster" id="monster">Monster 796</a>
+    <a ui-sref="panigale" id="panigale">Panigale 1299s</a>
+    <a ui-sref="multistrada" id="multistrada">Multistrada 1200</a>
+    <a ui-sref="diavel" id="diavel">Diavel</a>
+    <a ui-sref="scrambler" id="scrambler">Scrambler</a>
+  </div>
+
+
+    
+
+
   <a ui-sref="home">Home</a>
 	<a ui-sref="about">About</a>
 	<div ui-view></div>

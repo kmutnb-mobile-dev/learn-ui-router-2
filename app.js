@@ -6,10 +6,27 @@ angular.module('app', ['ui.router'])
       	url: '/home',
       	templateUrl : 'template/home.html'
     	})
-			.state('about', {
-      	url: '/about',
-      	template : '<h1 class="s2">About</h1>'
-    	});
+			.state('monster', {
+      	url: '/monster',
+      	templateUrl : 'template/monster.html'
+    	})
+      .state('panigale', {
+        url: '/panigale',
+        templateUrl : 'template/panigale.html'
+      })
+      .state('multistrada', {
+        url: '/multistrada',
+        templateUrl : 'template/multistrada.html'
+      })
+      .state('diavel', {
+        url: '/diavel',
+        templateUrl : 'template/diavel.html'
+      })
+      .state('scrambler', {
+        url: '/scrambler',
+        templateUrl : 'template/scrambler.html'
+      })
+      ;
 	})
   .controller('AppController', ['$scope', function($scope) {
     //

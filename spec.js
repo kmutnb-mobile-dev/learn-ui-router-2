@@ -1,6 +1,6 @@
 describe('Ducati Shop', function() {
 	beforeEach(function() {
-    browser.get('http://localhost:8000');
+    browser.get('http://localhost:8080');
   });
 
   it('should have title', function() {    
@@ -66,12 +66,20 @@ describe('Ducati Shop', function() {
 
   it('should show monster detail when click monster button', function() {
     element(by.id('monster')).click();
-    expect(by.css('#header')).toEqual('Monster 796');
+    expect(element(by.css('#header')).getText()).toEqual('Monster 796');
+
+    expect(
+    	browser.getCurrentUrl()
+    ).toEqual('http://localhost:8080/#/monster');
   });
 
   it('should show scrambler detail when click scrambler button', function() {
     element(by.id('scrambler')).click();
-    expect(by.css('#header')).toEqual('Scrambler');
+    expect(element(by.css('#header')).getText()).toEqual('Scrambler');
+
+    expect(
+    	browser.getCurrentUrl()
+    ).toEqual('http://localhost:8080/#/scrambler');
   });
 
 
