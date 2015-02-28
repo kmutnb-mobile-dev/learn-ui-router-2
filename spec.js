@@ -1,11 +1,13 @@
 describe('Ducati Shop', function() {
-  it('should have title', function() {
-    browser.get('http://0.0.0.0:8000');
+	beforeEach(function() {
+    browser.get('http://localhost:8000');
+  });
+
+  it('should have title', function() {    
     expect(browser.getTitle()).toEqual('Ducati Shop');
   });
 
   it('should menu bar', function() {
-    browser.get('http://0.0.0.0:8000');
     expect(
     	element(
     		by.id('menu-bar')
@@ -14,7 +16,6 @@ describe('Ducati Shop', function() {
   });
 
   it('should have 5 button in menu bar', function() {
-    browser.get('http://0.0.0.0:8000');
     expect(
     	element(
     		by.id('menu-bar')
@@ -24,7 +25,6 @@ describe('Ducati Shop', function() {
   });
 
   it('should have monster button', function() {
-    browser.get('http://0.0.0.0:8000');
     expect(
     	element(
     		by.css('#monster')
@@ -33,7 +33,6 @@ describe('Ducati Shop', function() {
   });
 
   it('should have panigale button', function() {
-    browser.get('http://0.0.0.0:8000');
     expect(
     	element(
     		by.css('#panigale')
@@ -42,7 +41,6 @@ describe('Ducati Shop', function() {
   });
 
   it('should have multistrada button', function() {
-    browser.get('http://0.0.0.0:8000');
     expect(
     	element(
     		by.css('#multistrada')
@@ -51,7 +49,6 @@ describe('Ducati Shop', function() {
   });
 
   it('should have diavel button', function() {
-    browser.get('http://0.0.0.0:8000');
     expect(
     	element(
     		by.css('#diavel')
@@ -60,7 +57,6 @@ describe('Ducati Shop', function() {
   });
 
   it('should have scrambler button', function() {
-    browser.get('http://0.0.0.0:8000');
     expect(
     	element(
     		by.css('#scrambler')
@@ -69,16 +65,12 @@ describe('Ducati Shop', function() {
   });
 
   it('should show monster detail when click monster button', function() {
-    browser.get('http://0.0.0.0:8000');
     element(by.id('monster')).click();
-
     expect(by.css('#header')).toEqual('Monster 796');
   });
 
   it('should show scrambler detail when click scrambler button', function() {
-    browser.get('http://0.0.0.0:8000');
     element(by.id('scrambler')).click();
-
     expect(by.css('#header')).toEqual('Scrambler');
   });
 
