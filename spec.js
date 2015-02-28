@@ -6,20 +6,29 @@ describe('Ducati Shop', function() {
 
   it('should menu bar', function() {
     browser.get('http://0.0.0.0:8000');
-    expect(element(by.id('menu-bar')).isPresent()).toBe(true);
+    expect(
+    	element(
+    		by.id('menu-bar')
+    	).isPresent()
+    ).toBe(true);
   });
 
   it('should have 5 button in menu bar', function() {
     browser.get('http://0.0.0.0:8000');
-    expect(element(by.id('menu-bar')).all(by.css('a')).count()).toEqual(5);
+    expect(
+    	element(
+    		by.id('menu-bar')
+    	)
+    	.all(by.css('a')).count()
+    ).toEqual(5);
   });
 
   it('should have monster button', function() {
     browser.get('http://0.0.0.0:8000');
     expect(
     	element(
-    		by.css('#monster').getText()
-    	)
+    		by.css('#monster')
+    	).getText()
     ).toEqual('Monster 796');
   });
 
@@ -27,8 +36,8 @@ describe('Ducati Shop', function() {
     browser.get('http://0.0.0.0:8000');
     expect(
     	element(
-    		by.css('#panigale').getText()
-    	)
+    		by.css('#panigale')
+    	).getText()
     ).toEqual('Panigale 1299s');
   });
 
@@ -36,8 +45,8 @@ describe('Ducati Shop', function() {
     browser.get('http://0.0.0.0:8000');
     expect(
     	element(
-    		by.css('#multistrada').getText()
-    	)
+    		by.css('#multistrada')
+    	).getText()
     ).toEqual('Multistrada 1200');
   });
 
@@ -45,8 +54,8 @@ describe('Ducati Shop', function() {
     browser.get('http://0.0.0.0:8000');
     expect(
     	element(
-    		by.css('#diavel').getText()
-    	)
+    		by.css('#diavel')
+    	).getText()
     ).toEqual('Diavel');
   });
 
@@ -54,8 +63,8 @@ describe('Ducati Shop', function() {
     browser.get('http://0.0.0.0:8000');
     expect(
     	element(
-    		by.css('#scrambler').getText()
-    	)
+    		by.css('#scrambler')
+    	).getText()
     ).toEqual('Scrambler');
   });
 
@@ -70,7 +79,7 @@ describe('Ducati Shop', function() {
     browser.get('http://0.0.0.0:8000');
     element(by.id('scrambler')).click();
 
-    expect(by.css('#scrambler')).toEqual('Scrambler');
+    expect(by.css('#header')).toEqual('Scrambler');
   });
 
 
