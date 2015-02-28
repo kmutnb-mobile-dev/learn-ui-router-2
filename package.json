@@ -8,11 +8,8 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "gulp": "^3.8.11",
-    "gulp-livereload": "^3.8.0"
-  },
   "devDependencies": {
-    "gulp-server-livereload": "^1.2.0"
+    "gulp": "^3.8.11",
+    "gulp-connect": "^2.2.0"
   }
 }

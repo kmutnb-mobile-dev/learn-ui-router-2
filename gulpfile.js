@@ -1,11 +1,8 @@
-var gulp = require('gulp');
-var server = require('gulp-server-livereload');
+var gulp = require('gulp'),
+  connect = require('gulp-connect');
  
-gulp.task('default', function() {
-  gulp.src('./')
-    .pipe(server({
-      livereload: true,
-      directoryListing: false,
-      open: true
-    }));
+gulp.task('connect', function() {
+  connect.server();
 });
+ 
+gulp.task('default', ['connect']);

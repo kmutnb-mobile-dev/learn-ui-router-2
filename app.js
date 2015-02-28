@@ -4,7 +4,7 @@ angular.module('app', ['ui.router'])
 		$stateProvider
     	.state('home', {
       	url: '/home',
-      	template : '<h1 class="s1">Home 555</h1><p>faslkjfkajflkjaskfjaksfjaskjflkasfjlkasf</p>'
+      	templateUrl : 'template/home.html'
     	})
 			.state('about', {
       	url: '/about',
